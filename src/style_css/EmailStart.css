@@ -1,0 +1,42 @@
+.divEmail{
+  background-image: url('../Images/totalScore.png');
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 150vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  
+  
+ 
+}
+
+.positionEmailAndInput{
+display: flex;
+justify-content: center;
+flex-direction: column;
+justify-items: center;
+align-items:center;
+
+
+}
+
+
+
+
+.inputEmail{
+  width: 300px;
+  padding: 10px;
+  border: none;
+  outline: none
+  
+}
+
+
+
+.sizeEmailStart{
+  width:   768px; 
+  margin: 0px auto;
+}

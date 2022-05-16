@@ -1,0 +1,26 @@
+.mainDivTimer{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  
+}
+
+.ImgCircle{
+  width: 50%;
+}
+.divImgCircle{
+  display: flex;
+  justify-content: center;
+}
+
+.positionLeftSide{
+  display: flex;
+flex-direction: column;
+
+}
+
+.timer{
+  color: red;
+}
+
+
