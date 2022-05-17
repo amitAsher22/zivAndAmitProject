@@ -1,0 +1,23 @@
+.backgrounPage33{
+  background-image: url("../Images/page3.png");
+  background-size: cover;
+  width: 100%;
+  height:180vh;
+  display: flex;
+  align-items:flex-end;
+ justify-content: center;
+ text-align: center;
+
+
+}
+
+.titleCongrats{
+  font-size:60px;
+}
+
+.title2{
+  font-size:40px;
+}
+.title3{
+  font-size:40px;
+}
