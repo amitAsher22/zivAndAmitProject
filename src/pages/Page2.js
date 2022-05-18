@@ -12,11 +12,8 @@ import ListItemText from '@mui/material/ListItemText';
 
 /////// )))))))
 import { styled } from '@mui/material/styles';
-import FormGroup from '@mui/material/FormGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
-import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
+import { useState } from 'react'
 /////// ))))))
 //// material ui
 
@@ -79,9 +76,26 @@ const IOSSwitch = styled((props) => (
   },
 }));
 
-function Page2() {
-  const {page , email ,setEmail , setPage} = useContext(AppContext)
+//////// matrial ui IOS style
 
+
+
+
+function Page2() {
+  const {page , email ,setEmail , setPage , score , setScore} = useContext(AppContext)
+
+
+  function scoreAmount(event , index){
+    if(event.target.checked && data[index].enable === 1){
+      setScore(score + data[index].weight);
+    }else if (event.target.checked && data[index].enable === 0){
+      setScore( score - data[index].weight);
+    }else if (!event.target.checked && data[index].enable === 1){
+      setScore(score + data[index].weight);
+    }else if (!event.target.checked && data[index].enable === 0){
+      setScore( score +- data[index].weight);
+    }
+  }
   
   return (
     <div>
@@ -93,7 +107,8 @@ function Page2() {
         return(
           <ListItem style={{borderBottom: '1px solid #ccc' , width:'890px' , margin:'auto'}}>
             <ListItemText key={index} primary={item.q} />
-           Disable  <IOSSwitch/>  Enable
+           Disable  <IOSSwitch onClick={(event)=> scoreAmount(event , index)}/>  Enable
+           {score}
           </ListItem>
 
         )

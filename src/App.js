@@ -11,8 +11,9 @@ export const AppContext = React.createContext(null)
 function App() {
   const [page , setPage] = useState('page1')
   const [email , setEmail] = useState('')
+  const [score , setScore] = useState(30)
   return (
-   <AppContext.Provider value={{page , email ,setEmail , setPage}}>
+   <AppContext.Provider value={{page , email ,setEmail , setPage , score , setScore}}>
    {
      {
        'page1': <><Page1/></>,
