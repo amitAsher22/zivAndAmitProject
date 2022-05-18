@@ -1,36 +1,28 @@
+import React , {useState} from "react";
+
 //// pages + components
-import NotFound from "./components/NotFound";
+
 import Page1 from "./pages/Page1";
 import Page2 from "./pages/Page2";
 import Page3 from "./pages/Page3";
-// import EmailStart from "./components/EmailStart";
 
-
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
-
-
-
-
+export const AppContext = React.createContext(null)
 
 function App() {
+  const [page , setPage] = useState('page1')
+  const [email , setEmail] = useState('')
   return (
-    <div>
-    <BrowserRouter>
-    <Routes>
-         <Route path="/" element={<Page1/>}/> 
-         <Route path="/page2" element={<Page2/>}/> 
-         <Route path="/page3" element={<Page3/>}/> 
-         <Route path="*" element={<NotFound/>}/> 
-    </Routes>
-    </BrowserRouter>
-     
-      
-     
-    </div>
+   <AppContext.Provider value={{page , email ,setEmail , setPage}}>
+   {
+     {
+       'page1': <><Page1/></>,
+       'page2': <><Page2/></>,
+       'page3': <><Page3/></>,
+
+     }[page]
+   }
+
+   </AppContext.Provider>
   );
 }
 

@@ -1,5 +1,5 @@
 /// img 
-import logo from '../Images/logo.png'
+// import logo from '../.././Images/logo.png'
 /// css
 import  '../style_css/logo.css'
 
@@ -9,9 +9,9 @@ import  '../style_css/logo.css'
 
 const Logo = () => {
   return (
-    <div className='divLogo'>
-      <img src={logo} className="logo_img"/>
-    
+    <div>
+      {/* <img src={logo} className="logo_img"/> */}
+    <h1>logo</h1>
     </div>
   )
 }

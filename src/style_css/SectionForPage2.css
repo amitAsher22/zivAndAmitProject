@@ -1,0 +1,23 @@
+.page2DivAndQuetion{
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  /* border-bottom:1px solid black; */
+  padding: 20px;
+  width: 890px;
+}
+
+.imgPage2{
+  width: 30%;
+}
+
+.questionsPage2{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+
+.timerPage2{
+  font-size: 30px
+}
